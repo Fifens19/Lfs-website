@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOST F.STUDIOS | Портал вселенных</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body class="theme-lost-city"> <!-- Изначально активна тема Затерянного Города -->
+
+    <!-- ШАПКА -->
+    <header class="headerls">
+	<img src="logocity.png" alt="Запределье">
+        <div class="logols"><img src="lfslogols.png" alt="LFS ЗГ"></div>
+	<a href ="index.html" class="tab-button3">НАЗАД</a>
+    </header>
+
+    <!-- ЦЕНТР - НАВИГАЦИЯ ПО ВСЕЛЕННЫМ -->
+		
+<main class="main">
+    <!-- Навигация -->
+    <nav class="universe-tabsls">
+        <a href="mainl.html" class="nav-tabls">Главное</a>
+        <a href="historyls.html" class="nav-tabls">История(без спойлеров)</a>
+        <a href="diaryl.html" class="nav-tabls">Дневник разработчика</a>
+        <a href="releasels.html" class="nav-tabls">Релизы</a>
+    </nav>
+
+    <!-- Уникальный контент страницы -->
+    <div class="content-blocklc">
+        <h1>Здесь мой дневник</h1>
+        <p>Я делаю игру полностью в одиночку, но возможно скоро будет помощник. Пока не знаю.</p>
+        <div class="content-blocklc">
+		<h2>Основные даты</h2>
+        <ul>
+		<li>8 августа 2025 года игра начала разрабатываться.</li>
+		<li>14 октября 2025 года появился самый первый билд</li>
+		<li>31 октбря и по сей день игра проходит альфа тестирование.</li>
+        </ul> 
+        </div>
+        <h2>Отличия демо версии от полной версии</h2>
+        <div class="version-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Демо-версия</th>
+                <th>Полная версия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Квартира и лес</td>
+                <td>Квартира и лес с меняющейся погодой, какие то событями и тд</td>
+            </tr>
+            <tr>
+                <td>4 концовки, зависит от твоих выборов</td>
+                <td>11 уникальных концовок, зависящих от твоих выборов</td>
+            </tr>
+            <tr>
+                <td>Базовая механика выживания (голод, сон)</td>
+                <td>Гораздо насыщенее и сложнее геймплей</td>
+            </tr>
+            <tr>
+                <td>Доступен только легкий режим</td>
+                <td>Доступен легкий, нормальный и сложный режим.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+		<p>Грубо говоря демо это лишь начало. А полная версия и конец, и начало.</p>
+        <h1>Скриншоты с игры. </h1>
+       <div class="slider-container">
+    <button class="slider-arrow prev" onclick="changeSlide(-1)">‹</button>
+    
+    <div class="slider">
+        <div class="slide active">
+            <img src="img/menu.jpg" alt="Главное меню игры">
+            <figcaption>Главное меню</figcaption>
+        </div>
+        
+        <div class="slide">
+            <img src="img/house.jpg" alt="Вход в заброшенный дом">
+            <figcaption>Исследование дома Леонарда</figcaption>
+        </div>
+        
+        <div class="slide">
+            <img src="img/house2.jpg" alt="Интерьер заброшенного дома">
+            <figcaption>Интерьер дома Леонарда</figcaption>
+        </div>
+    </div>
+    
+    <button class="slider-arrow next" onclick="changeSlide(1)">›</button>
+</div>
+        <p>Это то что готово. Квартирка вряд ли изменится, а вот меню да. А где же лес? Не готов он ещё, поэтому и нет. Сейчас я делаю лес</p>
+        <p>И да, и этот раздел тоже будет обновляться.</p>
+    </div>
+</main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© LOST F.STUDIOS. Создаём миры.</p>
+			<p>Мы в соцсетях:</p>
+			<div class="social-links">
+    <a href="https://vk.com/pvz2_atlantis" target="_blank" class="social-link">
+        <img src="icons/vk.png" alt="Мы ВКонтакте">
+    </a>
+    <a href="https://www.youtube.com/@Fifens/videos" target="_blank" class="social-link">
+        <img src="icons/youtube.png" alt="Наш YouTube">
+    </a>
+    <a href="https://www.tiktok.com/@fkruton?_t=ZN-8wLGDnD1auE&_r=1" target="_blank" class="social-link">
+        <img src="icons/tiktok.png" alt="Наш tiktok">
+    </a>
+    <a href="https://t.me/+WqikJVV6C3hkYzY6" target="_blank" class="social-link">
+        <img src="icons/telegram.png" alt="Наш Telegram">
+    </a>
+    <a href="https://itch.io" target="_blank" class="social-link">
+        <img src="icons/itch.png" alt="Наш Itch.io">
+    </a>
+    <!-- Добавляй другие соцсети по аналогии -->
+</div>
+            <!-- Сюда потом добавишь ссылки на соцсети -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

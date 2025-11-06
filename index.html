@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOST F.STUDIOS | Портал вселенных</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body class="theme-lost-city"> <!-- Изначально активна тема Затерянного Города -->
+
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="logomain">
+            <img src="lfslogob.png" alt="LFS Запределье">
+            <img src="lfslogoc.png" alt="LFS Канал">
+            <img src="lfslogols.png" alt="LFS ЗГ">
+        </div>
+    </header>
+
+    <!-- ЦЕНТР - НАВИГАЦИЯ ПО ВСЕЛЕННЫМ -->
+		
+    <main class="main">
+    <h1 div class="main_title">Для начала выбери вселенную для погружения</h1>
+    
+    <div class="universes-tabs">
+        
+        <!-- Вселенная 1 -->
+        <div class="universe-option">
+            <a href ="mainb.html" class="tab-button" data-theme="theme-beyond" onclick="changeTheme('theme-beyond')"><img src="logob.png" alt="Запределье"></a>
+            <!-- ОПИСАНИЕ -->
+            <p class="universe-description">Запределье — это личный артхаусный хоррор про Фифенса и внутренний мир</p>
+        </div>
+        
+        <!-- Вселенная 2 -->
+        <div class="universe-option">
+            <a href ="mainl.html" class="tab-button" data-theme="theme-lost-city" onclick="changeTheme('theme-lost-city')"> <img src="logocity.png" alt="Затерянный город"></a>
+            <!-- ОПИСАНИЕ -->
+            <p class="universe-description">Затерянный город — фэнтези-сага об энергетических существах и природе баланса.</p>
+        </div>
+        
+    </div>
+</main>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© LOST F.STUDIOS. Создаём миры.</p>
+			<p>Мы в соцсетях:</p>
+			<div class="social-links">
+    <a href="https://vk.com/pvz2_atlantis" target="_blank" class="social-link">
+        <img src="icons/vk.png" alt="Мы ВКонтакте">
+    </a>
+    <a href="https://www.youtube.com/@Fifens/videos" target="_blank" class="social-link">
+        <img src="icons/youtube.png" alt="Наш YouTube">
+    </a>
+    <a href="https://www.tiktok.com/@fkruton?_t=ZN-8wLGDnD1auE&_r=1" target="_blank" class="social-link">
+        <img src="icons/tiktok.png" alt="Наш tiktok">
+    </a>
+    <a href="https://t.me/+WqikJVV6C3hkYzY6" target="_blank" class="social-link">
+        <img src="icons/telegram.png" alt="Наш Telegram">
+    </a>
+    <a href="https://itch.io" target="_blank" class="social-link">
+        <img src="icons/itch.png" alt="Наш Itch.io">
+    </a>
+    <!-- Добавляй другие соцсети по аналогии -->
+</div>
+            <!-- Сюда потом добавишь ссылки на соцсети -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+/* БАЗОВЫЕ СТИЛИ И ОБЩИЕ ЭЛЕМЕНТЫ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    transition: all 0.5s ease; /* Плавное переключение тем */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px;
+	padding-top:41px;
+	display:flex;
+	gap:360px;
+    font-weight: bold;
+}
+.headerls {
+    background-color: #1a4f1a;
+    padding: 20px;
+    padding-top:41px;
+    display:flex;
+    gap:360px;
+    font-weight: bold;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.main {
+    flex: 1;
+    display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.main_title {
+    text-align: center;
+	margin: 0;
+}
+.universe-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Расстояние между кнопкой и текстом */
+}
+
+.universe-description {
+    text-align: center;
+    max-width: 300px; /* Чтобы текст не растягивался в одну строку */
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    /* Унаследует цвет от общей темы */
+}
+.universes-tabs {
+    display: flex;
+	justify-content: center;
+    gap: 30px;
+}
+
+.tab-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+.tab-button2 {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tab-button3 {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+.tab-button3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #00ffff;
+    cursor: pointer;
+}
+.test-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    color: #F08080;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tab-button2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px #00ffff;
+    cursor: pointer;
+}
+
+/* ТЕМА ПО УМОЛЧАНИЮ: ЗАТЕРЯННЫЙ ГОРОД (ЗЕЛЕНО-ЗОЛОТАЯ) */
+body.theme-lost-city {
+    background-color: #0a2f0a; /* Тёмно-зелёный, как лес */
+    color: #d4af37; /* Золотой */
+}
+
+.theme-lost-city .header,
+.theme-lost-city .footer {
+    background-color: #1a4f1a; /* Зелёный */
+    color: #d4af37; /* Золотой */
+}
+
+.theme-lost-city .tab-button {
+    background-color: #d4af37; /* Золотой */
+    color: #0a2f0a; /* Тёмно-зелёный */
+}
+
+/* ТЕМА: ЗАПРЕДЕЛЬЕ (КРАСНО-СИНЯЯ) */
+body.theme-beyond {
+    background-color: #0a0a2f; /* Глубокий синий */
+    color: #F08080; /* Неоново-розово-красный */
+}
+
+.theme-beyond .header,
+.theme-beyond .footer {
+    background-color: #1a1a4f; /* Синий */
+    color:#F08080; /* Неоново-красный */
+}
+
+.theme-beyond .tab-button {
+    background-color: #F08080; /* Неоново-красный */
+    color: #0a0a2f; /* Тёмно-синий */
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Расстояние между иконками */
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1); /* Иконка немного увеличивается при наведении */
+}
+
+.social-link img {
+    width: 32px;  /* Настрой под нужный размер */
+    height: 32px;
+    display: block;
+}
+.universe-tabs {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.universe-tabsls {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-tab {
+    padding: 10px 20px;
+    text-decoration: none;
+	color:#FF0000;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    font-size: 22px;
+}
+
+.nav-tab.active {
+    font-weight: bold;
+	color: white;
+    transform: translateY(-2px);
+	text-shadow: 0 0 10px #00ffff;
+}
+.nav-tabls {
+    padding: 10px 20px;
+    text-decoration: none;
+    color:#d4af37;
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s ease;
+    font-size: 22px;
+}
+
+.nav-tabls.active {
+    font-weight: bold;
+    color: #ffc300;
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.content-block {
+    padding: 20px;
+	font-size: 20px;
+    min-height: 60vh;
+}
+li {
+	font-size: 25px;
+}
+.logomain {
+    display: flex;
+    gap: 340px;
+}
+.logols {
+    padding-top: 40px;
+}
+.specials-grid {
+    display: flex;
+    gap: 30px; /* Расстояние между колонками */
+    margin: 20px 0;
+}
+
+.special-column {
+    flex: 1; /* Делает колонки одинаковой ширины */
+    display: flex;
+    flex-direction: column;
+}
+
+.special-text {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.special-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Можно убрать, если не нужно */
+}
+
+.update-notice {
+     font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Для мобилок - чтобы колонки становились друг под другом */
+@media (max-width: 768px) {
+    .specials-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.secret {
+    display: none; /* Изначально текст скрыт */
+    margin-top: 20px;
+    padding: 15px;
+    background: #1a1a4f;
+    border-radius: 8px;
+    border-left: 4px solid #ff0066;
+}
+
+.secret.revealed {
+    display: block; /* Показываем, когда добавляется этот класс */
+}
+.version-table {
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+.version-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.version-table th {
+    background: #2a2a2a;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #444;
+}
+
+.version-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333;
+    vertical-align: top;
+}
+
+.version-table tr:last-child td {
+    border-bottom: none;
+}
+
+.version-table td:first-child {
+    border-right: 1px solid #333;
+}
+/* ОСНОВНОЙ СТИЛЬ ДЛЯ СПИСКОВ "ЗАПРЕДЕЛЬЯ" */
+.content-block ul {
+    list-style: none; /* Убираем стандартные маркеры */
+    padding-left: 0;
+    margin: 20px 0;
+    border-left: 2px solid #2a9fd6; /* Синее свечение */
+    padding-left: 15px;
+}
+
+.content-block li {
+    padding: 8px 0;
+    margin-bottom: 5px;
+    position: relative;
+    color: #ccc; /* Основной текст */
+    font-family: 'Courier New', monospace; /* Техно-шрифт */
+    font-size: 14px;
+    line-height: 1.4;
+    border-bottom: 1px dashed #333; /* Разделитель как шрам */
+    transition: all 0.3s ease;
+}
+
+/* ЭФФЕКТ ПРИ НАВЕДЕНИИ */
+.content-block li:hover {
+    color: #2a9fd6; /* Синее свечение */
+    text-shadow: 0 0 5px #2a9fd6; /* Свечение текста */
+    border-bottom-color: #2a9fd6;
+    transform: translateX(5px);
+}
+
+/* КАСТОМНЫЕ МАРКЕРЫ */
+.content-block li::before {
+    content: "■"; /* Квадрат как техно-маркер */
+    color: #2a9fd6;
+    font-size: 12px;
+    position: absolute;
+    left: -15px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.content-block li:hover::before {
+    opacity: 1;
+    text-shadow: 0 0 8px #2a9fd6;
+}
+
+/* РАЗДЕЛЕНИЕ ПРОШЛОГО И БУДУЩЕГО */
+.content-block p {
+    color: #888;
+    font-style: italic;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+/* ЗОЛОТАЯ ВЕРСИЯ ДЛЯ ОСОБЫХ РАЗДЕЛОВ */
+.content-blocklc {
+    color: #ffffff; /* Белый текст для контраста */
+}
+
+.content-blocklc ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+    border-left: 2px solid #ffd700; /* Золотая граница */
+    padding-left: 15px;
+}
+
+.content-blocklc li {
+    padding: 8px 0;
+    margin-bottom: 5px;
+    position: relative;
+    color: #ffffff; /* Белый текст */
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    border-bottom: 1px dashed #555; /* Более светлый разделитель */
+    transition: all 0.3s ease;
+}
+
+.content-blocklc li:hover {
+    color: #ffd700; /* Золотой текст */
+    text-shadow: 0 0 8px #ffd700; /* Золотое свечение */
+    border-bottom-color: #ffd700;
+    transform: translateX(5px);
+}
+
+.content-blocklc li::before {
+    content: "■";
+    color: #ffd700; /* Золотой маркер */
+    font-size: 12px;
+    position: absolute;
+    left: -15px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.content-blocklc li:hover::before {
+    opacity: 1;
+    text-shadow: 0 0 10px #ffd700;
+}
+.content-blocklc p {
+    color: #ffd700;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* ЗОЛОТЫЕ ЗАГОЛОВКИ */
+.content-blocklc h2 {
+    color: #ffd700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+    border-bottom: 1px solid #ffd700;
+    padding-bottom: 5px;
+}
+.slider-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+.slider {
+    position: relative;
+    background-color: #1a4f1a;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.slide figcaption {
+    color: #b0b0b0;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.slider-arrow.prev { left: 25px; }
+.slider-arrow.next { right: 25px; }
+
+.slider-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}

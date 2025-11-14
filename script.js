@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 });
     });
-});
 
     // 2. Секретная кнопка (если есть на странице)
     const secretText = document.getElementById('secret-text');

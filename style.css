@@ -263,12 +263,6 @@ li {
 }
 
 /* Для мобилок - чтобы колонки становились друг под другом */
-@media (max-width: 768px) {
-    .specials-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
 .secret {
     display: none; /* Изначально текст скрыт */
     margin-top: 20px;
@@ -484,4 +478,85 @@ li {
 
 .slider-arrow:hover {
     background: rgba(0, 0, 0, 0.7);
+}
+/* ТВОЙ СУЩЕСТВУЮЩИЙ КОД ДЛЯ ДЕСКТОПА ОСТАЁТСЯ БЕЗ ИЗМЕНЕНИЙ */
+.content-blocksph1 {
+font-size: 50px;
+text-align: center;
+}
+/* А вот мобильная версия */
+@media (max-width: 768px) {
+   .content-blocksph1 {
+font-size: 15px;
+text-align: center;
+}
+  .universes-tabs {
+    flex-direction: column; /* Главное - ставим в колонку */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .universe-option {
+    width: 100%; /* Занимает всю ширину */
+    max-width: 300px; /* Но не больше 300px */
+  }
+
+  .tab-button {
+    width: 100%; /* Кнопка на всю ширину родителя */
+    max-width: 210px; /* Чуть меньше 300px для отступов */
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .main {
+    gap: 30px; /* Уменьшаем общие отступы */
+  }
+  .specials-grid {
+        flex-direction: column;
+        gap: 20px;
+    }	
+  .logomain {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .logomain img {
+    max-width: 100px; /* Уменьшаем логотипы */
+    height: auto;
+  }
+
+  /* Ставим третий логотип по центру нижней строки */
+  .logomain img:nth-child(3) {
+    grid-column: 1 / span 2;
+  }
+  .universe-tabs {
+    flex-direction:column;
+    gap: 15px;
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+}
+.header {
+    flex-direction:column;
+	gap: 15px;
+    font-weight: bold;
+	align-items:center;
+	justify-content: center;
+}
+  /* Встройка для любого iframe (плеер ВК) */
+  iframe {
+    width: 100% !important;
+    max-width: 340px !important;
+    height: 200px !important; /* Подбери высоту под мобилки */
+  }
+  
+.headerls {
+    background-color: #1a4f1a;
+     flex-direction:column;
+	gap: 15px;
+    font-weight: bold;
+	align-items:center;
+	justify-content: center;
+}
 }

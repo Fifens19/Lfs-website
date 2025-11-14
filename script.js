@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             matches: tabHref === currentPage
         });
        
-        if (tabHref === currentPage || tabHref === '/' + currentPage)) {
+        if (tabHref === currentPage || tabHref === '/' + currentPage) {
             console.log('🎯 ДОБАВЛЯЕМ КЛАСС!');
             if (tab.classList.contains('nav-tabls')) {
                 tab.classList.add('actives');

@@ -1,5 +1,4 @@
-
-function changeTheme(themeName) {
+﻿function changeTheme(themeName) {
     document.body.className = '';
     document.body.classList.add(themeName);
 }
@@ -12,24 +11,16 @@ function navigateWithTheme(event, themeName) {
     }, 5000);
 }
 
-// ВСЯ логика ниже должна быть внутри DOMContentLoaded
+// ВЕСЬ код внутри одного DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Навигационные табы
     console.log('=== ДИАГНОСТИКА ===');
     
-    // Проверяем, какие элементы нашёл скрипт
+    // Проверяем элементы
     console.log('Найдено элементов .nav-tab:', document.querySelectorAll('.nav-tab').length);
     console.log('Найдено элементов .nav-tabls:', document.querySelectorAll('.nav-tabls').length);
     console.log('Найдено элементов .slide:', document.querySelectorAll('.slide').length);
     
-    // Текущая страница
-    console.log('Текущая страница:', window.location.pathname.split('/').pop());
-   
-  
-   
-    const currentPage = window.location.pathname.split('/').pop();
-    
-    document.addEventListener('DOMContentLoaded', function() {
+    // Навигационные табы
     const currentPage = window.location.pathname.split('/').pop();
     console.log('🔍 ТЕКУЩАЯ СТРАНИЦА:', currentPage);
     
@@ -53,19 +44,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-});
-    // 2. Секретная кнопка (если есть на странице)
+
+    // Секретная кнопка
     const secretText = document.getElementById('secret-text');
     const testButton = document.getElementById('test-button');
     
-    if (testButton && secretText) { // Проверка на существование!
+    if (testButton && secretText) {
         testButton.addEventListener('click', function() {
             secretText.classList.add('revealed');
             testButton.style.display = 'none';
         });
     }
 
-    // 3. СЛАЙДЕР (самая проблемная часть)
+    // Слайдер
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     
@@ -82,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
             showSlide(currentSlide + n);
         }
 
-        // Вешаем обработчики на кнопки
         document.addEventListener('click', function(e) {
             if (e.target.classList.contains('next-btn')) {
                 changeSlide(1);
@@ -94,4 +84,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
         showSlide(0);
         setInterval(() => changeSlide(1), 5000);
-    
+    }
+}); // ← Закрывающая скобка DOMContentLoaded

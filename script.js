@@ -29,21 +29,31 @@ document.addEventListener('DOMContentLoaded', function() {
    
     const currentPage = window.location.pathname.split('/').pop();
     
-    // Ищем ВСЕ вкладки обеих вселенных
-    const allTabs = document.querySelectorAll('.nav-tab, .nav-tabls');
+    document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop();
+    console.log('🔍 ТЕКУЩАЯ СТРАНИЦА:', currentPage);
     
-    allTabs.forEach(tab => {
-        if (tab.getAttribute('href') === currentPage) {
-            // Автоматически определяем стиль вселенной
+    const allTabs = document.querySelectorAll('.nav-tab, .nav-tabls');
+    console.log('📋 ВСЕГО ТАБОВ:', allTabs.length);
+    
+    allTabs.forEach((tab, index) => {
+        const tabHref = tab.getAttribute('href');
+        console.log(`Таб ${index}:`, {
+            href: tabHref,
+            classes: tab.classList.value,
+            matches: tabHref === currentPage
+        });
+        
+        if (tabHref === currentPage) {
+            console.log('🎯 ДОБАВЛЯЕМ КЛАСС!');
             if (tab.classList.contains('nav-tabls')) {
-                tab.classList.add('actives'); // Стиль Затерянного города
+                tab.classList.add('actives');
             } else {
-                tab.classList.add('active');  // Стиль Запределья
+                tab.classList.add('active');
             }
         }
-});
     });
-
+});
     // 2. Секретная кнопка (если есть на странице)
     const secretText = document.getElementById('secret-text');
     const testButton = document.getElementById('test-button');

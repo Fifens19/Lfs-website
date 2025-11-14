@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (tabHref === currentPage || tabHref === '/' + currentPage) {
             console.log('🎯 ДОБАВЛЯЕМ КЛАСС!');
             if (tab.classList.contains('nav-tabls')) {
-                tab.classList.add('actives');
+                tab.classList.add('active');
             } else {
                 tab.classList.add('active');
             }

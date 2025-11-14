@@ -26,33 +26,22 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Текущая страница:', window.location.pathname.split('/').pop());
    
   
+   
     const currentPage = window.location.pathname.split('/').pop();
-    console.log('Текущая страница:', currentPage); // Проверяем что тут
-
-    const navTabs = document.querySelectorAll('.nav-tab');
-    console.log('Найдено .nav-tab:', navTabs.length); // Сколько нашлось
     
-    navTabs.forEach(tab => {
-        const tabHref = tab.getAttribute('href');
-        console.log('Сравниваем:', tabHref, 'и', currentPage); // Смотрим что сравниваем
-        
-        if (tabHref === currentPage) {
-            console.log('>>> СОВПАЛО! Добавляем класс active');
-            tab.classList.add('active');
+    // Ищем ВСЕ вкладки обеих вселенных
+    const allTabs = document.querySelectorAll('.nav-tab, .nav-tabls');
+    
+    allTabs.forEach(tab => {
+        if (tab.getAttribute('href') === currentPage) {
+            // Автоматически определяем стиль вселенной
+            if (tab.classList.contains('nav-tabls')) {
+                tab.classList.add('actives'); // Стиль Затерянного города
+            } else {
+                tab.classList.add('active');  // Стиль Запределья
+            }
         }
-    
-    // То же самое для navTabsLS
-    const navTabsLS = document.querySelectorAll('.nav-tabls');
-    console.log('Найдено .nav-tabls:', navTabsLS.length);
-    
-    navTabsLS.forEach(tab => {
-        const tabHref = tab.getAttribute('href');
-        console.log('Сравниваем LS:', tabHref, 'и', currentPage);
-        
-        if (tabHref === currentPage) {
-            console.log('>>> СОВПАЛО LS! Добавляем класс');
-            tab.classList.add(tab.classList.contains('nav-tabls') ? 'active' : 'active');
-        }
+});
     });
 });
 

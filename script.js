@@ -25,21 +25,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Текущая страница
     console.log('Текущая страница:', window.location.pathname.split('/').pop());
    
+  
     const currentPage = window.location.pathname.split('/').pop();
-    
+    console.log('Текущая страница:', currentPage); // Проверяем что тут
+
     const navTabs = document.querySelectorAll('.nav-tab');
+    console.log('Найдено .nav-tab:', navTabs.length); // Сколько нашлось
+    
     navTabs.forEach(tab => {
-        if (tab.getAttribute('href') === currentPage) {
+        const tabHref = tab.getAttribute('href');
+        console.log('Сравниваем:', tabHref, 'и', currentPage); // Смотрим что сравниваем
+        
+        if (tabHref === currentPage) {
+            console.log('>>> СОВПАЛО! Добавляем класс active');
             tab.classList.add('active');
         }
-    });
     
+    // То же самое для navTabsLS
     const navTabsLS = document.querySelectorAll('.nav-tabls');
+    console.log('Найдено .nav-tabls:', navTabsLS.length);
+    
     navTabsLS.forEach(tab => {
-        if (tab.getAttribute('href') === currentPage) {
+        const tabHref = tab.getAttribute('href');
+        console.log('Сравниваем LS:', tabHref, 'и', currentPage);
+        
+        if (tabHref === currentPage) {
+            console.log('>>> СОВПАЛО LS! Добавляем класс');
             tab.classList.add(tab.classList.contains('nav-tabls') ? 'active' : 'active');
         }
     });
+});
 
     // 2. Секретная кнопка (если есть на странице)
     const secretText = document.getElementById('secret-text');

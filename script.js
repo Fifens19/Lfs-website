@@ -15,6 +15,16 @@ function navigateWithTheme(event, themeName) {
 // ВСЯ логика ниже должна быть внутри DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function() {
     // 1. Навигационные табы
+    console.log('=== ДИАГНОСТИКА ===');
+    
+    // Проверяем, какие элементы нашёл скрипт
+    console.log('Найдено элементов .nav-tab:', document.querySelectorAll('.nav-tab').length);
+    console.log('Найдено элементов .nav-tabls:', document.querySelectorAll('.nav-tabls').length);
+    console.log('Найдено элементов .slide:', document.querySelectorAll('.slide').length);
+    
+    // Текущая страница
+    console.log('Текущая страница:', window.location.pathname.split('/').pop());
+   
     const currentPage = window.location.pathname.split('/').pop();
     
     const navTabs = document.querySelectorAll('.nav-tab');

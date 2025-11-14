@@ -94,4 +94,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
         showSlide(0);
         setInterval(() => changeSlide(1), 5000);
-    }
+    

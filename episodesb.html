@@ -35,11 +35,83 @@
     <div class="content-block">
         <h1>Запределье: 1 сезон</h1>
         <p>Здесь можно будет посмотреть по мере выхода раньше всех!</p>
-		<h2>Эпизод 1 ДОСТУПЕН УЖЕ СЕЙЧАС. Смотрите:</h2>
-        <iframe src="https://vk.com/video_ext.php?oid=501972663&id=456239891&hd=2&hash=8ad07547b3ea15ab" width="853" height="480" style="background-color: #000" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
-        <h2>Эпизод 2 СКОРО</h2>
+		<!-- ЗАГРУЖАЕМ БИБЛИОТЕКУ ОДИН РАЗ В НАЧАЛЕ СТРАНИЦЫ -->
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+
+<h2>Эпизод 1 ДОСТУПЕН УЖЕ СЕЙЧАС. Смотрите:</h2>
+<!-- 
+  ID ДОЛЖЕН БЫТЬ БЕЗ ПРОБЕЛОВ И СПЕЦСИМВОЛОВ.
+  Используй латиницу и дефисы: episode-1 
+-->
+<video id="episode-1">
+  <source src="https://ia600907.us.archive.org/32/items/episode1b_202511/ЗАПРЕДЕЛЬЕ%20-%20ЭПИЗОД%201%20Внутренний%20мир.mp4" type="video/mp4" />
+</video>
+
+<script>
+  // Инициализируем первый плеер по НОРМАЛЬНОМУ ID
+  fluidPlayer('episode-1', {
+    "layoutControls": {
+      "controlBar": { "autoHideTimeout": 3, "animated": true, "autoHide": true },
+      "htmlOnPauseBlock": {
+        "html": "<div style='color: #f08080; font-family: sans-serif; font-size: 24px; text-align: center; position: absolute; top: 20px; width: 100%; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);'>Lost F. Studios</div>",
+        "height": null,
+        "width": null
+      },
+      "autoPlay": false,
+      "mute": true,
+      "allowTheatre": true,
+      "playPauseAnimation": true,
+      "playbackRateEnabled": false,
+      "allowDownload": false,
+      "playButtonShowing": false,
+      "fillToContainer": true,
+      "primaryColor": "#f08080",
+      "posterImage": "img/CREEEP.png"
+    },
+    "vastOptions": {
+      "adList": [],
+      "adCTAText": false,
+      "adCTATextPosition": ""
+    }
+  });
+</script>
+
+<h2>Эпизод 2 СКОРО, но тизер уже доступен</h2>
+<!-- Второй плеер с другим ID -->
+<video id="episode-2-trailer">
+  <source src="https://ia601900.us.archive.org/1/items/episode-2-trailer/эпизод%202%20трейлер.mp4" type="video/mp4" />
+</video>
+
+<script>
+  // Инициализируем второй плеер по ЕГО ID
+  fluidPlayer('episode-2-trailer', {
+    "layoutControls": {
+      "controlBar": { "autoHideTimeout": 3, "animated": true, "autoHide": true },
+      "htmlOnPauseBlock": {
+        "html": "<div style='color: #f08080; font-family: sans-serif; font-size: 24px; text-align: center; position: absolute; top: 20px; width: 100%; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);'>Lost F. Studios</div>",
+        "height": null,
+        "width": null
+      },
+      "autoPlay": false,
+      "mute": true,
+      "allowTheatre": true,
+      "playPauseAnimation": true,
+      "playbackRateEnabled": false,
+      "allowDownload": false,
+      "playButtonShowing": false,
+      "fillToContainer": true,
+      "primaryColor": "#f08080",
+      "posterImage": ""
+    },
+    "vastOptions": {
+      "adList": [],
+      "adCTAText": false,
+      "adCTATextPosition": ""
+    }
+  });
+</script>
         </center>
-        <!-- Твой уникальный контент для этой страницы -->
+        <!-- эх хоть бы кто-то этот сайт заценил -->
     </div>
 </main>
 
